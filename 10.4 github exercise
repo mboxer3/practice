@@ -1,0 +1,72 @@
+Last login: Thu Jan 11 14:41:49 on ttys000
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+Manwinders-MBP:~ Manroop$ mkdir practice_branch
+Manwinders-MBP:~ Manroop$ ls
+211 west saratoga	4.4 Arrays.html		Desktop			Library			Pictures		tic tac toe game.js
+3.3 CSS Box Model.html	4.4 Arrays_files	Documents		Movies			Public
+3.3 CSS Box Model_files	Applications		Downloads		Music			practice_branch
+Manwinders-MBP:~ Manroop$ cd practice_branch
+Manwinders-MBP:practice_branch Manroop$ touch index.html
+Manwinders-MBP:practice_branch Manroop$ git init
+Initialized empty Git repository in /Users/Manroop/practice_branch/.git/
+Manwinders-MBP:practice_branch Manroop$ git add .
+Manwinders-MBP:practice_branch Manroop$ git commit -m "simple html file"
+[main (root-commit) da42aa7] simple html file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 index.html
+Manwinders-MBP:practice_branch Manroop$ git checkout -b simple_branch
+Switched to a new branch 'simple_branch'
+Manwinders-MBP:practice_branch Manroop$ touch app.css
+Manwinders-MBP:practice_branch Manroop$ git add .
+Manwinders-MBP:practice_branch Manroop$ git commit -m "empty css file"
+[simple_branch 172875f] empty css file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 app.css
+Manwinders-MBP:practice_branch Manroop$ git checkout main
+Switched to branch 'main'
+Manwinders-MBP:practice_branch Manroop$ git merge
+fatal: No remote for the current branch.
+Manwinders-MBP:practice_branch Manroop$ git merge simple_branch
+Updating da42aa7..172875f
+Fast-forward
+ app.css | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 app.css
+Manwinders-MBP:practice_branch Manroop$ git branch -d simple_branch
+Deleted branch simple_branch (was 172875f).
+Manwinders-MBP:practice_branch Manroop$ git remote add origin https://github.com/mboxer3/practice.git
+Manwinders-MBP:practice_branch Manroop$ git branch -M main
+Manwinders-MBP:practice_branch Manroop$ git push -u origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (5/5), 433 bytes | 433.00 KiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/mboxer3/practice.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+Manwinders-MBP:practice_branch Manroop$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
